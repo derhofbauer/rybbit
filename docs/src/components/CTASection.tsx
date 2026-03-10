@@ -28,8 +28,8 @@ export function CTASection({
   const resolvedSecondaryButtonText = secondaryButtonText ?? t("Live demo");
 
   return (
-    <section className="py-12 md:py-20 w-full px-4 relative z-10">
-      <div className="max-w-[1200px] mx-auto">
+    <section className="py-12 md:py-20 w-full relative z-10">
+      <div className="max-w-[1200px] mx-auto px-4">
         <div className="relative overflow-hidden rounded-3xl bg-neutral-950 p-10 md:p-16 lg:p-20">
           {/* Noise texture overlay */}
           <svg
@@ -83,7 +83,7 @@ export function CTASection({
             </div>
 
             <p className="text-neutral-500 text-sm">
-              {t("7-day free trial")}
+              {t("7-day free trial. Cancel anytime.")}
             </p>
           </div>
         </div>
