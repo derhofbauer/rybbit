@@ -13,7 +13,7 @@ typically add the Rybbit tracking script to your main sitepackage
 <Step>
 ### Get Your Tracking script
 
-First, you'll need your Rybbit tracking script. You can find this in your Rybitt
+First, you'll need your Rybbit tracking script. You can find this in your Rybbit
 dashboard under **Site Settings > Tracking Code**. It will look something like this:
 
 ```html
@@ -47,7 +47,7 @@ page {
       rybbit = https://app.rybbit.io/api/script.js
       rybbit.defer = 1
       rybbit.data {
-        site-id = YOUR_SITE_ID
+        data-site-id = YOUR_SITE_ID
       }
   }
   # ...
@@ -65,13 +65,13 @@ If you want to load the script only for your production environment, you need
 to add a condition for the `applicationContext`:
 
 ```
-[applicationContext == "Production]
+[applicationContext == "Production"]
 page {
   includeJS {
-      rybbit = <https://app.rybbit.io/api/script.js>
+      rybbit = https://app.rybbit.io/api/script.js
       rybbit.defer = 1
       rybbit.data {
-        site-id = YOUR_SITE_ID
+        data-site-id = YOUR_SITE_ID
       }
   }
 }
@@ -85,7 +85,7 @@ page {
 
 It's best practice to store your Rybbit Site ID and instance URL in your site
 constants. You might have a `constants.typoscript` file in your codebase, which
-you'll when you want to add the values to the GIT repository.
+you'll use when you want to add the values to the GIT repository.
 
 You can also add the values into a TypoScript record in the TYPO3 backend.
 </Step>
@@ -98,7 +98,7 @@ You can also add the values into a TypoScript record in the TYPO3 backend.
 - Open your live website in a browser.
 - Navigate through a few pages.
 - Check your Rybbit dashboard for incoming data. It might take a few minutes
-  for the first evets to appear.
+  for the first events to appear.
 </Step>
 
 </Steps>
